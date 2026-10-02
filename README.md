@@ -1,294 +1,132 @@
+<!-- KI-LABEN-SHOWCASE-1 -->
 <div align="center">
 
-# 🚀 KI-Laben Setup · Launchpad
+# KI-Laben Setup
+### Første dag. Klar for neste steg.
 
-### Første dag på KI-Laben — uten kaos.
+Arbeidskontoer, nettleser og verktøy — samlet i én guidet Windows-opplevelse.
 
-Et moderne Windows-verktøy som samler onboarding, arbeidskontoer, nettleser, Discord, Google Workspace, ChatGPT, Drive og AI-hjelp i én guidet flyt.
+**[Nettside](https://Darschnid479.github.io/Setup/)** &nbsp;·&nbsp; **[Windows-utgaver](https://github.com/Darschnid479/Setup/releases)** &nbsp;·&nbsp; **[Dokumentasjon](#dokumentasjon)** &nbsp;·&nbsp; **[Tilbakemelding](https://github.com/Darschnid479/Setup/issues)**
 
+[![Nettside](https://github.com/Darschnid479/Setup/actions/workflows/launchpad-pages.yml/badge.svg)](https://github.com/Darschnid479/Setup/actions/workflows/launchpad-pages.yml)
 [![Build](https://github.com/Darschnid479/Setup/actions/workflows/build.yml/badge.svg)](https://github.com/Darschnid479/Setup/actions/workflows/build.yml)
-[![Release](https://img.shields.io/github/v/release/Darschnid479/Setup?display_name=tag&sort=semver)](https://github.com/Darschnid479/Setup/releases)
-[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-0a84ff)](#krav)
-[![.NET](https://img.shields.io/badge/.NET-10-512BD4)](https://dotnet.microsoft.com/)
-[![Visual Studio](https://img.shields.io/badge/Visual%20Studio-2026-5C2D91)](#utvikling)
+[![Releases](https://img.shields.io/github/v/release/Darschnid479/Setup?style=flat&color=48bba7)](https://github.com/Darschnid479/Setup/releases)
 
-<img src="docs/assets/hero.png" alt="KI-Laben Setup Launchpad" width="100%">
+<img src="github-site/assets/readme-banner.png" alt="KI-Laben Setup Launchpad – presentasjonsgrafikk" width="100%">
 
-**[⚡ Kom i gang](#kom-i-gang)** · **[🖥️ Se grensesnittet](#skjermbilder)** · **[🧠 AI](#ai-hjelp)** · **[🛠️ Utvikling](#utvikling)** · **[📦 Releases](#releases)**
+`Windows` &nbsp; `VB.NET / WinForms` &nbsp; `.NET 10` &nbsp; `Separat AI-gateway`
 
 </div>
 
----
+## Mindre kontokaos. Mer tid til å skape.
 
-## Hva er dette?
+KI-Laben Setup samler oppstarten for nye medlemmer: profil, nettleservalg, arbeids-e-post, Google, ChatGPT, Discord, Drive og veiledning. Brukeren får én rekkefølge å følge og en oversikt over bekreftede steg.
 
-**KI-Laben Setup** er laget for å gjøre oppstarten for nye deltakere enkel og oversiktlig. I stedet for en liste med lenker, kontoer og programmer får brukeren én veiviser med tydelige steg, status og hjelp underveis.
+> **Status:** Prosjektet videreutvikles. Se faktiske bygg i [Actions](https://github.com/Darschnid479/Setup/actions) og versjonsnotater i [Releases](https://github.com/Darschnid479/Setup/releases). Denne presentasjonen er ikke et bevis på at en Windows-utgave er testet eller signert.
 
-Målet er enkelt: **minst mulig teknisk friksjon før man kan begynne å lære og jobbe.**
+## Et innblikk i grensesnittet
 
-### Flyten
+Bildene er **UI-forhåndsvisninger fra designarbeidet**, ikke verifiserte skjermbilder av en publisert EXE. Bytt dem gjerne ut med anonymiserte skjermbilder etter Windows-testing.
 
-```text
-01 Din profil
-      ↓
-02 Velg nettleser
-      ↓
-03 Arbeids-e-post
-      ↓
-04 Google / Workspace
-      ↓
-05 ChatGPT
-      ↓
-06 Discord
-      ↓
-07 Drive
-      ↓
-08 AI-hjelp
-      ↓
-09 Oppsummering
-```
+<table>
+<tr><td width="50%"><b>01 · Din profil</b><br><img src="github-site/assets/screenshots/01-profile.png" alt="UI-forhåndsvisning av profilskjermen"></td><td width="50%"><b>02 · Velg nettleser</b><br><img src="github-site/assets/screenshots/02-browser.png" alt="UI-forhåndsvisning av nettleservalg"></td></tr>
+<tr><td width="50%"><b>03 · Discord</b><br><img src="github-site/assets/screenshots/03-discord.png" alt="UI-forhåndsvisning av Discord-oppsett"></td><td width="50%"><b>04 · AI-hjelp</b><br><img src="github-site/assets/screenshots/04-ai.png" alt="UI-forhåndsvisning av AI-hjelp"></td></tr>
+</table>
 
----
+**[Se større bilder og interaktivt galleri på nettsiden →](https://Darschnid479.github.io/Setup/#grensesnitt)**
 
-## ✨ Høydepunkter
+## Hva Launchpad samler
 
-| Funksjon | Hva den gjør |
+| Område | Flyten i prosjektet |
 |---|---|
-| 🎯 Guidet onboarding | Samler hele oppstarten i én steg-for-steg-veiviser. |
-| 🌐 Nettleservalg | Oppdager og hjelper med Chrome, Firefox eller Edge. |
-| 💬 Discord | Kan hente Discord-installasjonen fra leverandøren og kontrollere filen før oppstart. |
-| 📧 Arbeidskonto | Bruker KI-Laben-arbeidsadressen og holder private e-postadresser utenfor flyten. |
-| 🧠 AI-hjelp | Egen hjelpeside som kan kobles til KI-Labens AI-gateway. |
-| 📊 Fremdrift | Viser hvor langt brukeren har kommet og kan huske lokal fremdrift. |
-| ✨ Motion UI | Myke overganger, aktiv stegmarkør og moderne mørkt grensesnitt. |
-| 🛡️ Sikkerhetsfokus | Ingen passord eller API-nøkler skal lagres i klientprogrammet. |
-| 🧾 Oppsummering | Lager en enkel rapport over hvilke steg som er bekreftet. |
+| Arbeidskonto | `fornavn@ki-laben.no`. Ingen privat e-post i profilskjemaet. |
+| Nettleser | Valg av Chrome, Firefox eller Edge, med installasjonsdeteksjon og nedlasting. |
+| Google | Veiledning for eksisterende arbeidsadresse og Workspace Essentials. |
+| ChatGPT | Invitasjonen hentes i Domeneshop-webmail og godtas med riktig arbeidskonto. |
+| Discord | Nedlasting og veiledet oppsett. Full KI-Laben-serverinvitasjon må klargjøres. |
+| Drive | Åpne arbeidsverktøy og bekreft tilgang til delte mapper. |
+| AI-hjelp | Klient som kan kobles til en konfigurert AI-gateway. Ingen API-nøkkel skal bygges inn i appen. |
+| Fremdrift | Lokal lagring og rapport over steg brukeren selv har bekreftet. |
 
----
+**Automatisering er ikke det samme som automatisk tilgang.** Postkasser og invitasjoner må klargjøres av drifter. Innlogging, verifisering og installasjon krever fortsatt brukerens handling.
 
-## 🖥️ Skjermbilder
+## Kom i gang
 
-> Bildene under er **UI-forhåndsvisninger basert på dagens WinForms-layout og fargeprofil**. Når en release er testet på Windows kan de erstattes med direkte skjermbilder fra den ferdige EXE-en.
+### Bruke programmet
 
-### Start / profil
+1. Åpne [Releases](https://github.com/Darschnid479/Setup/releases) og les notatene for utgaven du velger.
+2. Last ned riktig Windows-pakke når en slik fil er tilgjengelig. Ikke forveksle kildekode-ZIP med en ferdig app.
+3. Pakk ut hele mappen og start `KiLabenSetup.exe`.
+4. Følg stegene og bekreft at tilgangene virker.
 
-<img src="docs/screenshots/01-profile.png" alt="Profilskjerm i KI-Laben Setup" width="100%">
+En pakke publisert som **self-contained** trenger ikke separat .NET-runtime. Dette må stemme med byggevalgene for den konkrete releasen. Kontroller alltid kilde, utgiver og eventuelle kontrollsummer; ikke slå av Windows-sikkerhetsfunksjoner.
 
-### Velg nettleser
-
-<img src="docs/screenshots/02-browser.png" alt="Nettleservalg i KI-Laben Setup" width="100%">
-
-### Discord
-
-<img src="docs/screenshots/03-discord.png" alt="Discord-oppsett i KI-Laben Setup" width="100%">
-
-### AI-hjelp
-
-<img src="docs/screenshots/04-ai.png" alt="AI-hjelp i KI-Laben Setup" width="100%">
-
----
-
-## ⚡ Kom i gang
-
-### For vanlige brukere
-
-Når en ferdig release finnes, bruk **Releases** i stedet for å bygge kildekoden selv.
-
-1. Åpne [Releases](https://github.com/Darschnid479/Setup/releases).
-2. Last ned nyeste Windows-pakke.
-3. Pakk ut hele mappen.
-4. Start `KiLabenSetup.exe`.
-5. Følg Launchpad steg for steg.
-
-> Den publiserte Windows-versjonen bygges som self-contained. Brukeren skal derfor ikke trenge Visual Studio eller .NET SDK bare for å kjøre programmet.
-
-### For utviklere
+### Utvikle videre
 
 ```bat
+git clone https://github.com/Darschnid479/Setup.git
+cd Setup
 BYGG.bat
 ```
 
-Byggeskriptet sjekker .NET 10 SDK, kjører tester, bygger WinForms-programmet og AI-gatewayen, og lager Windows-utgaven i:
+Prosjektpakken er konfigurert for Visual Studio 2026, .NET 10 SDK og WinForms. Se gjeldende `.vbproj`, `global.json` og utviklerdokumentasjon i repoet før bygging.
+
+## Arkitektur
 
 ```text
-utgivelse\
-```
-
----
-
-## Krav
-
-### Kjøre ferdig release
-
-- Windows 10 eller Windows 11, x64
-- Internett for nettbaserte onboarding-steg og nedlastinger
-
-### Bygge kildekoden
-
-- Visual Studio 2026
-- .NET 10 SDK
-- Workload: **.NET desktop development**
-- Git anbefales
-
-Se [Utviklerguiden](docs/DEVELOPMENT.md) for hele oppsettet.
-
----
-
-## 🌐 Nettleser og programmer
-
-Launchpad kan hjelpe brukeren med å velge nettleser og hente nødvendige programmer. Nedlasting og installasjon er bevisst delt i to operasjoner: brukeren får se hva som er lastet ned før installasjonen startes.
-
-Programmet er laget rundt leverandørenes offisielle kilder og har egen signaturkontroll for nedlastede Windows-filer.
-
-Mer informasjon: [Nedlastinger og tillit](Dokumentasjon/NEDLASTINGER.md).
-
----
-
-## 🧠 AI-hjelp
-
-Klientprogrammet inneholder en egen **AI-hjelp**-side. Selve API-nøkkelen skal aldri ligge i WinForms-klienten eller pushes til GitHub.
-
-Arkitekturen er:
-
-```text
-┌──────────────────────────┐
-│ KI-Laben Setup (WinForms)│
-└────────────┬─────────────┘
-             │ forespørsel
-             ▼
-┌──────────────────────────┐
-│ KI-Laben AI Gateway      │
-│ server-side secrets      │
-└────────────┬─────────────┘
+KI-Laben Setup / Windows Forms
+    ├── Guidet oppstart og lokal fremdrift
+    ├── Nettleser og programnedlastinger
+    └── Valgfri AI-hjelp
              │
              ▼
-        AI-tjeneste
+      Separat AI-gateway
+             │
+             ▼
+      Konfigurert AI-tjeneste
 ```
 
-Klienten sender bare det brukeren eksplisitt velger å sende. Passord, engangskoder og private opplysninger skal ikke legges inn i AI-feltet.
+AI-serveren må driftes og konfigureres separat. Ikke legg passord, engangskoder, private medlemsdata eller API-nøkler i spørsmål, repo eller klientkonfigurasjon. GitHub Pages er kun presentasjonssiden og kjører ikke AI-serveren.
 
-Se [AI-drift](Dokumentasjon/AI-DRIFT.md) og [AI-arkitektur](docs/AI.md).
+## Dokumentasjon
 
----
+- [Prosjektets dokumentasjonsmappe](Dokumentasjon/)
+- [GitHub- og utviklerdokumentasjon](docs/)
+- [Vedlikehold av den nye nettsiden](docs/github-showcase/VEDLIKEHOLD.md)
+- [Hva oppsett-BAT-en endrer](docs/github-showcase/OPPSETT.md)
+- [Kilder og bildeforklaring](docs/github-showcase/KILDER.md)
+- [README før presentasjonsoppgraderingen](README-before-showcase.md)
 
-## 🏗️ Prosjektstruktur
+## Publisering av nettsiden
+
+`github-site/` inneholder bare HTML, CSS, JavaScript og bilder. Workflowen **Launchpad website** publiserer denne mappen via GitHub Pages når relevante filer endres på `main`. Den bygger eller utgir **ikke** Windows-programmet.
 
 ```text
-Setup/
-├─ KiLabenSetup/              # WinForms-klienten (VB.NET)
-├─ KiLabenAiGateway/          # Separat AI-gateway (C#)
-├─ Tests/                     # Enkle logikk-/sanity-tester
-├─ Dokumentasjon/             # Operativ dokumentasjon
-├─ docs/                      # GitHub-dokumentasjon og skjermbilder
-│  ├─ screenshots/
-│  └─ assets/
-├─ .github/
-│  ├─ workflows/              # Automatisk build + release
-│  └─ ISSUE_TEMPLATE/         # Bug / feature maler
-├─ BYGG.bat                   # Lokal Windows-build
-├─ global.json                # .NET 10 SDK policy
-└─ README.md
+github-site/
+├── index.html
+├── assets/site.css
+├── assets/site.js
+└── assets/screenshots/
+
+.github/workflows/launchpad-pages.yml
 ```
 
----
+README og nettside er to ulike flater: README gir repoet en tydelig forside. Pages gir prosjektet en egen nettadresse med animasjoner, galleri og release-lenker.
 
-## 🔄 Git-strategi
+## Kvalitet før en Windows-release
 
-Anbefalt flyt:
+- Bygget i Actions må lykkes.
+- Programmet må prøves på en egnet Windows-maskin.
+- Logo, kontosteg, nedlasting og feilhåndtering må kontrolleres.
+- AI må testes separat med faktisk gateway-oppsett.
+- Logger, bilder og innstillinger må sjekkes for persondata og hemmeligheter.
 
-```text
-main ────────────────●────────●───────▶ stabile versjoner
-                      \      /
-dev    ●────●────●─────●────●────────▶ utvikling
-        \ feature/... /
-```
-
-- `main` = fungerende og gjennomgått kode
-- `dev` = aktiv utvikling
-- `feature/...` = én funksjon om gangen
-- tags som `v2026.2.0` = release
-
-Se [CONTRIBUTING.md](CONTRIBUTING.md).
-
----
-
-## 🤖 Automatisk build
-
-GitHub Actions bygger prosjektet på Windows ved push og pull request.
-
-Pipeline:
-
-```text
-Checkout
-   ↓
-.NET 10
-   ↓
-Restore
-   ↓
-Self-tests
-   ↓
-Build
-   ↓
-Publish Windows x64
-   ↓
-Upload artifact
-```
-
-Når en tag som starter med `v` pushes, kan release-workflowen lage en ZIP og publisere den som GitHub Release.
-
-Se [Releaseguiden](docs/RELEASES.md).
-
----
-
-## 🔐 Sikkerhet
-
-**Ikke commit:**
-
-- API-nøkler
-- passord
-- innloggingskoder
-- tokens
-- private medlemsopplysninger
-- `crash.log` med sensitive opplysninger
-
-Hvis du finner en sikkerhetsfeil, ikke legg hemmeligheter eller persondata i en offentlig issue. Se [SECURITY.md](SECURITY.md).
-
----
-
-## 🗺️ Roadmap
-
-Noen naturlige neste steg:
-
-- [ ] ekte automatisk oppdateringssjekk mot GitHub Releases
-- [ ] bedre statusdeteksjon for installerte apper
-- [ ] ferdig konfigurert Discord-serverinvitasjon
-- [ ] signert Windows-release
-- [ ] ekte skjermbilder fra testet Windows-release
-- [ ] tilgjengelighetsgjennomgang
-- [ ] automatiserte UI-tester
-- [ ] administratorportal for onboarding-status uten passorddata
-
-Detaljer: [ROADMAP.md](ROADMAP.md).
-
----
-
-## 🧪 Status
-
-Prosjektet er under aktiv utvikling. Nye releases bør først regnes som klare når:
-
-- GitHub Actions er grønn
-- Windows x64-pakken er startet på en ren testmaskin
-- onboarding-stegene er gjennomgått
-- nedlastinger peker til forventede leverandører
-- ingen nøkler eller private data ligger i repoet
-
----
+Rapporter feil i [Issues](https://github.com/Darschnid479/Setup/issues) uten private opplysninger. En grønn **nettside-workflow** betyr at Pages er publisert — ikke at Windows-programmet er feilfritt.
 
 <div align="center">
 
-### KI-Laben Setup
-**Fra ny maskin til klar for første dag.**
+**KI-Laben Setup · Launchpad**
 
-`Windows` · `VB.NET` · `.NET 10` · `WinForms` · `AI Gateway`
+Et felles startpunkt. Færre løse tråder.
 
 </div>

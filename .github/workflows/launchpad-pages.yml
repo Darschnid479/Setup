@@ -1,0 +1,54 @@
+# KI-LABEN-SHOWCASE-1
+# Publishes ONLY github-site/. Never upload the repository root as a Pages artifact.
+name: Launchpad website
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'github-site/**'
+      - '.github/workflows/launchpad-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: launchpad-github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Check site files
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s github-site/index.html
+          test -s github-site/assets/site.css
+          test -s github-site/assets/site.js
+          for file in 01-profile.png 02-browser.png 03-discord.png 04-ai.png; do
+            test -s "github-site/assets/screenshots/$file"
+          done
+      - name: Upload website only
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: github-site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
