@@ -1,0 +1,60 @@
+name: 🐛 Feilrapport
+description: Rapporter noe som ikke fungerer i KI-Laben Setup
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Takk! Ikke legg ved passord, tokens eller private medlemsopplysninger.
+  - type: input
+    id: version
+    attributes:
+      label: Versjon
+      placeholder: f.eks. 2026.2.0
+    validations:
+      required: true
+  - type: dropdown
+    id: step
+    attributes:
+      label: Hvilket steg?
+      options:
+        - Oppstart / profil
+        - Nettleser
+        - Arbeids-e-post
+        - Google / Workspace
+        - ChatGPT
+        - Discord
+        - Drive
+        - AI-hjelp
+        - Oppsummering
+        - Build / utvikling
+        - Annet
+  - type: textarea
+    id: what
+    attributes:
+      label: Hva skjedde?
+      description: Beskriv hva du gjorde, hva du forventet og hva som skjedde.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Slik kan feilen gjenskapes
+      placeholder: |
+        1. Start ...
+        2. Trykk ...
+        3. Se feil ...
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant feilmelding
+      description: Fjern persondata og hemmeligheter før du limer inn tekst.
+      render: text
+  - type: checkboxes
+    id: safe
+    attributes:
+      label: Sikkerhet
+      options:
+        - label: Jeg har kontrollert at rapporten ikke inneholder passord, tokens eller private opplysninger.
+          required: true

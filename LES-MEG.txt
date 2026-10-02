@@ -1,0 +1,71 @@
+﻿KI-LABEN SETUP LAUNCHPAD 2026.1
+
+Denne revisjonen sikrer animasjonsberegninger mot Integer-overflow.
+Hvis en dekorativ animasjon fortsatt får ugyldige verdier, slås bare animasjonen av i stedet for at onboarding-programmet krasjer.
+Uventede feil logges til crash.log ved siden av programmet.
+
+KI-LABEN SETUP / LAUNCHPAD 2026
+====================================
+VB.NET Windows Forms + valgfri AI-server
+
+KOM I GANG
+1. Pakk prosjektet ut i en NY mappe, ikke oppå et gammelt prosjekt.
+2. Hvis Windows har blokkert ZIP-en: kontroller innholdet først.
+   Bare hvis du stoler på den: Egenskaper > Fjern blokkering på ZIP-en,
+   og pakk ut på nytt. Ikke slå av Windows-sikkerhet globalt.
+3. Installer Visual Studio 2026 med arbeidsbelastningen .NET desktop development. Visual Studio 2026 bruker .NET 10 SDK.
+4. Dobbeltklikk BYGG.bat. Den bygger direkte med .NET 10 SDK uten PowerShell-skript eller endring av Execution Policy.
+5. Når alt lykkes: start utgivelse\KiLabenSetup.exe.
+   Del HELE utgivelse-mappen, ikke bare EXE-filen.
+
+FOR DESIGNER
+Åpne KI-Laben-Setup-Launchpad.sln, bygg og velg MainForm.vb > View Designer.
+Fanene er synlige i Designer. I kjørende program brukes sidemenyen.
+Ingen .resx-fil er nødvendig i denne utgaven. Vi har ikke fjernet Windows'
+sikkerhetsmekanismer; andre nedlastede filer kan fremdeles være blokkert.
+
+HVA DU FÅR
+- Fornavn, etternavn, rolle og erfaring i profil. Adressen er fornavn@ki-laben.no.
+- Ingen privat e-post, recovery-felt, personlige eksempelnavn, enhet eller mål.
+- Ingen utstyrsfane.
+- Velg nettleser: Chrome, Firefox eller Edge. Lokal installasjon oppdages.
+- Direkte EXE-nedlasting av valgt nettleser og Discord, og en felles kø.
+- Reell bytefremdrift, hastighet, avbryt og Windows-signaturkontroll.
+- Eget klikk og bekreftelse før installasjonsfilen startes. Ingen stille installasjon.
+- Domeneshop, Google/Essentials, ChatGPT-invitasjon og Drive-veiledning.
+- AI-fane med en ekte serverintegrasjon, ikke et skript som later som det er AI.
+- Animerte knapper, sidemenymarkør, fremdrift og grafikk. Bevegelse kan slås av.
+
+LOGO
+Den originale logoen bygges inn i programmet og vises hvit på et fast mørkt felt.
+Byggingen henter PNG-en fra KI-Labens offisielle adresse hvis den mangler.
+Nedlasting av logoen kunne ikke gjennomføres i arbeidsmiljøet som laget pakken.
+Hvis deres nett blokkerer adressen: kopier den ekte logo-original.png fra
+forrige prosjekt, eller lagre original-PNG-en i KiLabenSetup\Assets\logo-original.png.
+Ingen tom erstatningslogo er lagt inn. Kilden står i Assets\LES-MEG.txt.
+
+AI - EN GANG HOS DRIFTER
+AI virker etter at drifter har satt opp KiLabenAiGateway og tilgangskode.
+Les Dokumentasjon\AI-DRIFT.md. Deltakeren trenger IKKE en privat API-nøkkel.
+Uten serveren er vanlig stegveiledning og resten av programmet tilgjengelig.
+ChatGPT-invitasjon og OpenAI API-tilgang er to forskjellige oppsett.
+
+DISCORD-INVITASJON
+Legg den faktiske serverlenken i DiscordInvite i setup.settings.json.
+Bare discord.gg er ikke en serverinvitasjon. Knappen er derfor deaktivert
+inntil en gyldig full invitasjon er konfigurert. Nedlastingsknappen virker uavhengig.
+
+VIKTIGE GRENSER
+Programmet oppretter ikke Domeneshop-/Google-kontoer, omgår ikke innlogging,
+sender ikke ChatGPT-invitasjoner og setter ikke kontoer til ferdige automatisk.
+En nedlastet fil eller oppdaget EXE betyr ikke at medlemmet har riktig tilgang.
+Direkte nedlasting er satt opp for Windows x64. Andre arkitekturer bruker
+leverandørens nettside. Leverandører kan endre URL-er og signaturer over tid.
+
+TESTSTATUS
+Kilde- og strukturkontroller er kjørt. Windows/Visual Studio 2026 er ikke tilgjengelig i miljøet som laget pakken, så selve Windows-builden, Designer, installatører og AI mot en ekte API-konto må testes hos dere. Tests\SelfTest.vbproj kjøres av BYGG.bat.
+Les Dokumentasjon\TESTPLAN.md. Pakken er kildekode, ikke en ferdig testet EXE.
+
+VED FEIL
+Se build-logs for byggfeil. Ved nedlasting: bruk leverandørens nettside dersom
+nettverk, videresending eller signaturkontroll stopper. Ikke slå av kontrollene.

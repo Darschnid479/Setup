@@ -1,0 +1,29 @@
+name: ✨ Funksjonsforslag
+description: Foreslå en forbedring av Launchpad
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Hvilket problem løser dette?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Forslag til løsning
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Område
+      options:
+        - UI / design
+        - Onboarding
+        - Nedlasting / installasjon
+        - AI
+        - Build / GitHub
+        - Sikkerhet
+        - Annet

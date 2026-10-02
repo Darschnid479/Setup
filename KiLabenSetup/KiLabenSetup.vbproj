@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <RootNamespace>KiLabenSetup</RootNamespace>
+    <StartupObject>KiLabenSetup.Program</StartupObject>
+    <OptionStrict>On</OptionStrict><OptionExplicit>On</OptionExplicit><OptionInfer>On</OptionInfer>
+    <Version>2026.2.0</Version><AssemblyName>KiLabenSetup</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <LogoSourceUrl>https://www.ki-laben.no/wp-content/uploads/2025/11/cropped-Kilaben_logo-192x192.png</LogoSourceUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="MainForm.vb"><SubType>Form</SubType></Compile>
+    <Compile Update="MainForm.Designer.vb"><DependentUpon>MainForm.vb</DependentUpon></Compile>
+    <EmbeddedResource Include="Assets/logo-original.png"><LogicalName>KiLabenSetup.Assets.Logo.png</LogicalName></EmbeddedResource>
+    <None Update="setup.settings.json"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory><CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory></None>
+  </ItemGroup>
+  <Target Name="EnsureKiLabenLogo" BeforeTargets="PrepareForBuild" Condition="'$(DesignTimeBuild)' != 'true'">
+    <MakeDir Directories="$(MSBuildProjectDirectory)/Assets" />
+    <DownloadFile SourceUrl="$(LogoSourceUrl)" DestinationFolder="$(MSBuildProjectDirectory)/Assets" DestinationFileName="logo-original.png"
+      Retries="1" RetryDelayMilliseconds="1000" Condition="!Exists('$(MSBuildProjectDirectory)/Assets/logo-original.png')" ContinueOnError="WarnAndContinue" />
+    <Error Condition="!Exists('$(MSBuildProjectDirectory)/Assets/logo-original.png')"
+      Text="Offisiell logo mangler. Legg original PNG i KiLabenSetup/Assets/logo-original.png. Se LES-MEG.txt. Ingen tom erstatningslogo brukes." />
+  </Target>
+</Project>

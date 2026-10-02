@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔐 Sikkerhetsproblem
+    url: https://github.com/Darschnid479/Setup/security
+    about: Ikke legg hemmeligheter eller private data i en offentlig issue.

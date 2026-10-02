@@ -1,0 +1,156 @@
+{
+  "type": "static source audit - NOT a compilation or runtime test",
+  "date": "2026-10-02",
+  "checks": [
+    {
+      "check": "Project XML: KiLabenSetup/KiLabenSetup.vbproj",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Project XML: Tests/SelfTest.vbproj",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Project XML: KiLabenAiGateway/KiLabenAiGateway.csproj",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Manifest XML",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "No personal example names",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "No removed UI/state fields",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Correct webmail",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Work address uses first name",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "No resx dependency",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "No placeholder 1x1 PNG",
+      "passed": true,
+      "detail": "Official asset could not be downloaded here; build will fetch or require the original PNG."
+    },
+    {
+      "check": "No hardcoded OpenAI key",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "No execution policy bypass",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "No silent install flags",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Explicit installer consent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Download domain validation and MOW",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Revalidation before launch",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "AI code not serialized",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "AI server store false",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Designer declarations equal creations",
+      "passed": true,
+      "detail": "131 controls"
+    },
+    {
+      "check": "Every referenced form control exists",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "Every designer parent exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "VB string literal closure (lexical only)",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "File exists: BYGG.bat",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "File exists: scripts/Build.ps1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "File exists: scripts/Start-AiServer.ps1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "File exists: Tests/TestRunner.vb",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "File exists: KiLabenAiGateway/Program.cs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "File exists: KiLabenSetup/setup.settings.json",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "unperformed": [
+    "Windows build",
+    "WinForms Designer load",
+    "Windows UI and DPI",
+    "PowerShell syntax/runtime",
+    "Actual installer downloads/signatures/launch",
+    "Live OpenAI API request",
+    "Official logo download"
+  ],
+  "all_static_checks_pass": true
+}

@@ -1,0 +1,26 @@
+# Visual Studio / .NET
+.vs/
+**/bin/
+**/obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build output
+utgivelse/
+publish/
+artifacts/
+build-logs/
+
+# Runtime / local state
+crash.log
+*.local.json
+Downloads/
+
+# OS/editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/

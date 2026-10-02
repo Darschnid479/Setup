@@ -1,0 +1,10 @@
+LOGO
+Den originale logoen skal ligge her som logo-original.png.
+Kilde: https://www.ki-laben.no/wp-content/uploads/2025/11/cropped-Kilaben_logo-192x192.png
+
+Byggingen prøver å hente denne filen hvis den mangler. Hvis det ikke lykkes,
+lagrer drifter den originale PNG-filen her og kjører BYGG.bat på nytt.
+Ingen 1x1- eller gjennomsiktig erstatningsfil brukes.
+Bildet bygges inn som en embedded resource og hvitfarges ved kjøring.
+Det lastes ikke fra nettet hver gang deltakerprogrammet starter.
+MainForm bruker ikke .resx-fil i denne utgaven; Designer-kontrollene er vanlige WinForms-kontroller.

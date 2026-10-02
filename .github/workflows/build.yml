@@ -1,0 +1,60 @@
+name: Build Windows
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main, dev ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: .NET 10 · Windows x64
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Show SDK
+        run: dotnet --info
+
+      - name: Restore tests
+        run: dotnet restore Tests/SelfTest.vbproj
+
+      - name: Run self-tests
+        run: dotnet run --project Tests/SelfTest.vbproj -c Release --no-restore
+
+      - name: Restore WinForms app
+        run: dotnet restore KiLabenSetup/KiLabenSetup.vbproj -r win-x64
+
+      - name: Build WinForms app
+        run: dotnet build KiLabenSetup/KiLabenSetup.vbproj -c Release -r win-x64 --no-restore
+
+      - name: Build AI gateway
+        run: dotnet build KiLabenAiGateway/KiLabenAiGateway.csproj -c Release
+
+      - name: Publish Windows x64
+        run: >-
+          dotnet publish KiLabenSetup/KiLabenSetup.vbproj
+          -c Release
+          -r win-x64
+          --self-contained true
+          -p:PublishSingleFile=false
+          -o artifacts/KI-Laben-Setup-win-x64
+
+      - name: Upload Windows artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: KI-Laben-Setup-win-x64
+          path: artifacts/KI-Laben-Setup-win-x64/
+          if-no-files-found: error
+          retention-days: 14
